@@ -246,8 +246,8 @@ if __name__ == "__main__":
         def startup_server(scheme, address, port):
             import webbrowser
             if os.name == 'nt' and address == '0.0.0.0':
-                address = '127.0.0.1'
-            webbrowser.open(f"{scheme}://{address}:{port}")
+                address = '0.0.0.0'
+            webbrowser.open(f"http://{address}:{port}")
         call_on_start = startup_server
 
     try:
